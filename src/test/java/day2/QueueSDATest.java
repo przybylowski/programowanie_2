@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 public class QueueSDATest {
     @Test
     public void isCapacityGood() {
-        Assert.assertEquals(queueCapacity(10), 10);
+        QueueSDA queue = new QueueSDA(10);
+        Assert.assertEquals(queue.getSize(), 10);
     }
 
 }
