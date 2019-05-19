@@ -10,4 +10,10 @@ public class QueueSDATest {
         Assert.assertEquals(queue.getSize(), 10);
     }
 
+    @Test
+    public void isStringAdded() {
+        QueueSDA queue = new QueueSDA(10);
+        queue.addString("");
+    }
+
 }
