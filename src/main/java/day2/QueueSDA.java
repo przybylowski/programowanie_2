@@ -65,5 +65,10 @@ public class QueueSDA {
 
     }
 
+    public String peak () {
+        String peekedObject = tab [tail+1];
+        return peekedObject;
+    }
+
 
 }
