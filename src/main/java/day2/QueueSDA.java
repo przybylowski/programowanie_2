@@ -22,11 +22,10 @@ public class QueueSDA {
     }
 
     public boolean isFull() {
-        if (getActualSize() == capacity) {
-            return true;
+        return getActualSize() == capacity;
+
         }
-        return false;
-    }
+
     public boolean isEmpty() {
         return actualSize == 0;
     }
@@ -54,12 +53,14 @@ public class QueueSDA {
 
     public String pop() {
 
-        if (isEmpty() == true)
-        {throw new NoItemsInQueue(); }
+//        if (isEmpty() == true)
+//        {throw new NoItemsInQueue(); }
 
-        String returnedObject =  tab[tail];
+        String returnedObject =  this.tab[tail];
+        this.tab[tail] = null;
         this.tail++;
         this.actualSize--;
+        System.out.println(actualSize);
         return returnedObject;
 
 

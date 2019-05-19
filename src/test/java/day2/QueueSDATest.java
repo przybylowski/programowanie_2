@@ -13,10 +13,9 @@ public class QueueSDATest {
     @Test
     public void isStringAdded() {
         QueueSDA queue = new QueueSDA(10);
-
+        queue.add("Programowanie 1");
+        queue.add("Programowanie 2");
         Assert.assertEquals(queue.getActualSize(),2);
-        Assert.assertEquals(queue.pop(),"Programowanie 1");
-        Assert.assertEquals(queue.pop(),"Programowanie 2");
     }
 
     @Test
@@ -24,9 +23,18 @@ public class QueueSDATest {
         QueueSDA queue = new QueueSDA(10);
         queue.add("Programowanie 1");
         queue.add("Programowanie 2");
-        Assert.assertEquals(queue.pop(),"Programowanie 1");
-        Assert.assertEquals(queue.pop(),"Programowanie 2");
-        
+
+        queue.pop();
+        queue.pop();
+        Assert.assertEquals(queue.getActualSize(),0);
+
+    }
+    @Test
+    public void isStringPeaked() {
+        QueueSDA queue = new QueueSDA(10);
+        queue.add("Programowanie 1");
+        queue.add("Programowanie 2");
+
     }
 
 }
